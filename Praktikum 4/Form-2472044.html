@@ -10,12 +10,18 @@
             background-image: url("img/Background.png");
             background-repeat: no-repeat;
             background-size: cover;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            margin: 0;
+            
         }
         .input-field {
-            border: 2px solid white;
+            border: 2px solid black;
             padding: 20px;
             border-radius: 3px;
-            box-shadow: 0 0 10px rgba(white, white, white, white);
             width: 300px;
             margin: auto;
             height: 96%;
@@ -23,35 +29,55 @@
         }
         h1 {
             text-align: center;
-            font-weight:bold;
+            font-weight: bold;
             font-size: 21px;
             text-decoration: underline;
         }
-        .label {
-            color: black;
+        label {
+            margin-top: 10px;
+            display:contents;
+
         }
-        input{
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select {
             width: 100%;
             padding: 5px;
-            border: 1px solid black;
+            margin-top: 14px;
+            margin-bottom: 18px;
             border-radius: 70px;
+            border: 1px solid black;
+        
         }
-        .label1 {
-            color: black;
+        input[type="radio"] {
+            margin: 5px;
+            margin-bottom: 10%;
+            border: 1px solid black;
+        
+        }
+        button {
+            margin-left: 35%;
+            width: 30%;
+            padding: 10px;
+            background-color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 14px;
+            font-weight:900;
         }
         input{
-            width: 100%;
-            padding: 5px;
             border: 1px solid black;
-            border-radius: 70px;
         }
+     
     </style>
 </head>
 <body>
+
 <div class="input-field">
     <h1>Registration Form</h1>
+    <br>
     <form>
-        <font face="arial">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
         <label for="email">Email:</label>
@@ -60,18 +86,18 @@
         <input type="password" id="password" name="password" required><br><br>
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" required><br><br>
-        <label>Gender</label>
-        <p align="center">
-        <input type="radio" name="male" value="male">Male
-        <input type="radio" name="female" value="female">Female
-        <input type="radio" name="other" value="other">Other
+        <label>Gender:</label><br>
+        <label for="male"><input type="radio" id="male" name="gender" value="male"> Male</label>
+        <label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label>
+        <label for="other"><input type="radio" id="other" name="gender" value="other"> Other</label>
+        <p>Course:<select name="course">
+            <option value="teknik_informatika">Teknik Informatika</option>
+            <option value="other">Other Courses</option>
+        </select>
+        <button type="submit" style="color: yellow;">REGISTER</button>
     </p>
-
-    </font>
-
     </form>
+</div>
 
-
-    </div>
 </body>
 </html>
